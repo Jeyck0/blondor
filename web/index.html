@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blondor</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./includes/blondor.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg pt-5" style="padding-left: 5vw; padding-right: 5vw;">
+        <a class="navbar-brand" href="#"><img src="./includes/PNG/logo1.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color: black;"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">INICIO <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <div class="text-center">PRODUCTOS & <br>SERVICIOS </div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CONTACTO</a>
+              </li>
+          </ul>
+        </div>
+    </nav>
+    <section class="inicio" style="padding-left: 5vw; padding-right: 5vw; margin-bottom: -40px;">
+        <div class="content ml-auto">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <p class="bienvenidos-text" style=" font-style: italic; font-weight: lighter;">¡BIENVENIDOS A BLONDOR!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="estilo-text" style=" font-family: stangith;">Transformamos tu estilo <br> con elegancia</p>
+                </div>
+            </div>                
+        </div>        
+    </section>
+    <section class="nosotros position-absolute" id="nosotros">
+        <div class="row" id="nosotros_row">
+            <div class="col-12 text-center">
+                <div class="titulo">Nosotros</div>
+                <div class="linea-estrella">
+                    <hr>
+                    <div class="star"></div>
+                    <hr>
+                </div>
+                <p>
+                    <b>Somos un salón de belleza que entrega una amplia variedad
+                        de servicios y productos de alta calidad</b> a sus
+                    clientes, con un enfoque <b>profesional en el ámbito de
+                        la estética</b> y procurando que cada cliente se sienta
+                    satisfecho en la <b>experiencia de su cuidado personal.</b>
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="mensaje-container" id="mensaje-container">
+        <div class="mensaje">
+            <hr>
+            <h1>"Tu belleza, nuestra pasi&ograve;n."</h1>
+            <hr>
+        </div>
+    </div>
+    <section class="productos-servicios">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="row row-producto-texto">
+                    <div class="col-12 titulo">
+                        <h1>Productos &  <br>Servicios</h1>
+                    </div>
+                    <div class="col-12 texto">
+                        <p>
+                            Ofrecemos una amplia variedad de servicios que 
+                        van desde corte de cabello para niño, varón y 
+                        dama, técnicas de coloración, masajes capilares, 
+                        tratamientos faciales, y hasta manicure. También, 
+                        vende productos de peluquería pertenecientes a 
+                        alta gama, las marcas específicas son: Loreal, 
+                        Wella, Farmavita y Alterego
+                        </p>
+                    </div>    
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12" >
+                <div class="row row-1" >
+                </div>
+                <div class="row row-2" >
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-right">
+                        <img id="image1"  alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                        <img id="image2"  alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <img id="image3"  alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="iconos-servicios" style="padding-top: 150px;">
+        <div class="mensaje2-iconos row" style="background-color: white; width: 100%; color: black; z-index: 100; ">
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                <img src="./includes/PNG/icono1.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                <img src="./includes/PNG/icono2.png" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                <img src="./includes/PNG/icono3.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+    <section class="mensaje2-container" style="height: 500px; background-color: #015288;">
+    </section>
+
+    <section>
+        <div class="position-static">static</div>
+        <div class="position-relative">relative</div>
+        <div class="position-absolute">absolute</div>
+        <div class="position-fixed">fixed</div>
+        <div class="position-sticky">sticky</div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./includes/blondor.js"></script>
+</body>
+</html>
