@@ -36,6 +36,57 @@ const updateImages = () =>{
     }
 }
 
+const enviaForm = (element) =>{
+    
+    var xhr = new XMLHttpRequest();
+    var data = {
+        nombre : document.getElementById('nombre-form').value,
+        correo : document.getElementById('correo-form').value,
+        telefono : document.getElementById('telefono-form').value,
+        mensaje : document.getElementById('mensaje-form').value,
+    };
+    // Convertir el objeto data en una cadena de consulta (query string)
+    var params = new URLSearchParams(data).toString();
+
+    xhr.open("GET", "./includes/mail.php?"+params, true);
+    xhr.onreadystatechange = function() {
+        // Verificar si la solicitud se completó (estado 4) y si fue exitosa (estado 200)
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            // Parsear la respuesta JSON
+            var respuesta = JSON.parse(xhr.responseText);
+            // Mostrar la respuesta en la consola
+            if(respuesta.status === -1){
+                Swal.fire({
+                    title: 'Error!',
+                    text: respuesta.message,
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                  })
+            }
+            else{
+                Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: respuesta.message,
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
+
+            
+            
+        }
+        else{
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Algo Salió Mal :C"
+              });
+        }
+    };
+    xhr.send();
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     console.log("ancho_mensaje_container",getWidth("mensaje-container"));
     console.log("largo_mensaje_container",getHeight("mensaje-container"));
@@ -48,4 +99,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener('DOMContentLoaded', updateImages);
 window.addEventListener('resize', updateImages);
+
+document.getElementById('enviar-form').addEventListener('click',function(event){
+    event.preventDefault(); // Evita que el formulario se envíe
+    enviaForm('enviar-form');
+    return false;
+});
+
+
+document.getElementById('whatsappIcon').addEventListener('click', function() {
+    var icon = this;
+    icon.classList.add('salto');
+
+    // Eliminar la clase después de que la animación termine
+    setTimeout(function() {
+        icon.classList.remove('salto');
+    }, 500); // La duración debe coincidir con la duración de la animación en CSS
+});
 

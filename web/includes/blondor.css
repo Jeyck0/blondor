@@ -11,6 +11,9 @@ body {
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 .row{
     margin-left: 0;
@@ -170,8 +173,162 @@ body {
     height: 600px;
     
 } */
+
+.iconos-servicios .icono-servicio-text{
+    color: #015288;
+    font-size: 35px;
+    font-weight: 600;
+}
 /*FIN ICONOS SERVICIOS* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
 
+
+.banner-agenda-hora {
+    background: 
+    linear-gradient(to right, rgba(0, 51, 102, 1), rgba(0, 102, 204, 0)), /* Gradiente azulado de izquierda a derecha */
+        url('./PNG/imagen10.jpg') no-repeat center center/cover;
+    
+    background-blend-mode: overlay; /* Mezcla el gradiente con la imagen */
+    height: 600px; /* Asegura que la imagen cubra toda la pantalla */
+    align-items: center; 
+    justify-content: left; 
+    display:flex;
+}
+
+
+/*
+INICIO FORMULARIO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*/
+.formulario{
+    height: auto;
+}
+
+.formulario .formulario-datos{
+    background-color: #FFFCE9; 
+}
+
+.formulario label{
+    color: #015288;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.formulario input ,
+.formulario textarea{
+    border-radius: 15px;
+    background-color: #FFFCE9;
+}
+
+.formulario button{
+    background-color: #015288 !important;
+    border-radius: 12px !important;
+}
+
+.formulario iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    min-height: 300px;
+}
+/*FIN FORMULARIO >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
+
+
+/*INICIO FOOTER >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.footer{
+    background-color: #015288;
+    height: auto;
+}
+
+/*FIN FOOTER <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+
+
+/*INICIO ICONO HAMBURGESA >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+label.hamburger {
+    display: block;
+    /* background: #fff; */
+    width: 40px; /* less width = square hamburger */
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+ }
+ 
+ input#hamburger {
+   display:none
+ }
+ 
+ .line {
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background: #015288;
+    transition: 0.5s;
+ }
+ /* steps of 12 are optional, could also be 10, 13 etc */
+ .line:nth-child(1) { top: 12px; }
+ .line:nth-child(2) { top: 24px; }
+ .line:nth-child(3) { top: 36px; }
+ 
+ /* translateY must be same as */
+ #hamburger:checked + .hamburger .line:nth-child(1){
+    transform: translateY(12px) rotate(-45deg);
+ }
+ 
+ #hamburger:checked + .hamburger .line:nth-child(2){
+    opacity:0;
+ }
+ 
+ #hamburger:checked + .hamburger .line:nth-child(3){
+    transform: translateY(-12px) rotate(45deg);
+ }
+/*FIN ICONO HAMBURGESA* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<</
+
+
+/*INICIO ICONO WSP*/
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.whatsapp-float {
+    width: 60px;
+    height: 60px;
+    animation: saltoConstante 1s ease-in-out infinite;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-banner {
+    background-color: #25D366; /* Color de fondo del banner (verde de WhatsApp) */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes saltoConstante {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+/*FIN ICONO WSP*/
 
 /* Media  celular ---------------------------------------*/ 
 
@@ -237,7 +394,26 @@ body {
         padding: 5px;
     }
 
-    
+    /*ICONOS SERVICIOS*/
+
+    .iconos-servicios img{
+        height: 20%;
+        width: 20%;
+    }
+
+    .iconos-servicios .img-text{
+        font-size: 40%;
+    }
+
+    .banner-agenda-hora  .msg1{
+        font-size: 40px !important;
+        margin-left: 10px !important;
+    }
+
+    .banner-agenda-hora  .msg2{
+        font-size: 70px !important;
+        margin-left: 10px !important;
+    }
 
 }
 
@@ -359,3 +535,19 @@ body {
     }
 
 }
+
+
+
+/* Estilos para el menú en pantallas grandes */
+@media (min-width: 992px) {
+    #MenuTablet{
+        display: none !important;
+    }
+}
+
+/* Estilos para el menú en pantallas pequeñas */
+/* @media (max-width: 991.98px) {
+    #MenuTablet{
+        display: block !important;
+    }
+} */
